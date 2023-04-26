@@ -13,13 +13,6 @@ pipeline {
   }
 
   stages {
-
-    stage('config') {
-      steps {
-        sh 'node -version'
-      }
-    }
-
     stage('clone') {
       steps {
         git branch: 'develop', url: 'https://github.com/YirsisHertz/jenkins_vue_app.git'
