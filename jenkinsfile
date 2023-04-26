@@ -16,6 +16,7 @@ pipeline {
     stage('clone') {
       steps {
         git branch: 'develop', url: 'https://github.com/YirsisHertz/jenkins_vue_app.git'
+        sh 'sudo ln -sf "$(which node)" /usr/bin/node'
       }
     }
 
